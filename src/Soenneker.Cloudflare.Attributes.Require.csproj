@@ -46,7 +46,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Cloudflare.Validators.Request" Version="3.0.8" PrivateAssets="analyzers;build" />
+        <PackageReference Include="Soenneker.Cloudflare.Validators.Request" Version="3.0.12" PrivateAssets="analyzers;build" />
         <PackageReference Include="Soenneker.Enums.DeployEnvironment" Version="3.0.179" />
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.719" />
     </ItemGroup>
