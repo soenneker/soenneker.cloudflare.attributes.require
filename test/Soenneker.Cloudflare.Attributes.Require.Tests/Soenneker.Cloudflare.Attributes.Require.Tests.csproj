@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Cloudflare.Attributes.Require.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Cloudflare.Attributes.Require\Soenneker.Cloudflare.Attributes.Require.csproj" />
     </ItemGroup>
 
     <ItemGroup>
