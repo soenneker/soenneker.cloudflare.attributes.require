@@ -25,10 +25,5 @@
     <ItemGroup>
         <ProjectReference Include="..\..\src\Soenneker.Cloudflare.Attributes.Require\Soenneker.Cloudflare.Attributes.Require.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-        <Content Include="testconfig.json">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
 </Project>
+
