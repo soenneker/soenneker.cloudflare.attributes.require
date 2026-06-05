@@ -30,6 +30,11 @@ public sealed class RequireCloudflareFilter : IRequireCloudflareAttribute
             _exclude = true;
     }
 
+    /// <summary>
+    /// Executes the on authorization async operation.
+    /// </summary>
+    /// <param name="context">The context.</param>
+    /// <returns>A task that represents the asynchronous operation.</returns>
     public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
     {
         if (_exclude)
