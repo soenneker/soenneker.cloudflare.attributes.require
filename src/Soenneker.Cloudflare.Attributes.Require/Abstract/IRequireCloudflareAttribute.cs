@@ -3,7 +3,7 @@
 namespace Soenneker.Cloudflare.Attributes.Require.Abstract;
 
 /// <summary>
-/// A .NET authorization filter for requiring Cloudflare sourced traffic
+/// Rejects requests that do not present a client certificate chained to Cloudflare's Authenticated Origin Pull CA.
 /// </summary>
 public interface IRequireCloudflareAttribute : IAsyncAuthorizationFilter
 {

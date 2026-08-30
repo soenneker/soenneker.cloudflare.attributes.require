@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 
 namespace Soenneker.Cloudflare.Attributes.Require;
 
-///<inheritdoc cref="IRequireCloudflareAttribute"/>
 public sealed class RequireCloudflareFilter : IRequireCloudflareAttribute
 {
     private readonly ILogger<RequireCloudflareFilter> _logger;
@@ -30,11 +29,6 @@ public sealed class RequireCloudflareFilter : IRequireCloudflareAttribute
             _exclude = true;
     }
 
-    /// <summary>
-    /// Executes the on authorization async operation.
-    /// </summary>
-    /// <param name="context">The context.</param>
-    /// <returns>A task that represents the asynchronous operation.</returns>
     public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
     {
         if (_exclude)
@@ -43,7 +37,7 @@ public sealed class RequireCloudflareFilter : IRequireCloudflareAttribute
             return;
         }
 
-        if (!await _validator.IsFromCloudflare(context.HttpContext).NoSync())
+        if (!await _validator.IsFromCloudflare(context.HttpContext, context.HttpContext.RequestAborted).NoSync())
         {
             _logger.LogWarning("Blocked non-Cloudflare request from {Ip}", context.HttpContext.Connection.RemoteIpAddress);
             context.Result = new StatusCodeResult(StatusCodes.Status403Forbidden);

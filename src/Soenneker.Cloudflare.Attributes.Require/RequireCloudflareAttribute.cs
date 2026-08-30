@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Soenneker.Cloudflare.Attributes.Require.Abstract;
 using System;
 
 namespace Soenneker.Cloudflare.Attributes.Require;
 
-/// <inheritdoc cref="IRequireCloudflareAttribute"/>
+/// <summary>
+/// Requires the request to present a client certificate chained to Cloudflare's Authenticated Origin Pull CA.
+/// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
 public sealed class RequireCloudflareAttribute : TypeFilterAttribute
 {
