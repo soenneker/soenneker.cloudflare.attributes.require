@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Soenneker.Cloudflare.Attributes.Require;
 
+/// <inheritdoc cref="IRequireCloudflareAttribute" />
 public sealed class RequireCloudflareFilter : IRequireCloudflareAttribute
 {
     private readonly ILogger<RequireCloudflareFilter> _logger;
