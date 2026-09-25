@@ -49,11 +49,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Cloudflare.Validators.Request" Version="4.0.400" PrivateAssets="analyzers;build" />
-        <PackageReference Include="Soenneker.Enums.DeployEnvironment" Version="4.0.242" />
-        <PackageReference Include="Soenneker.Extensions.Configuration" Version="4.0.895" />
+        <PackageReference Include="Soenneker.Cloudflare.Validators.Request" Version="4.0.401" PrivateAssets="analyzers;build" />
+        <PackageReference Include="Soenneker.Enums.DeployEnvironment" Version="4.0.244" />
+        <PackageReference Include="Soenneker.Extensions.Configuration" Version="4.0.896" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Soenneker.Extensions.ValueTask" Version="4.0.123" />
+        <PackageReference Include="Soenneker.Extensions.ValueTask" Version="4.0.124" />
     </ItemGroup>
 </Project>
