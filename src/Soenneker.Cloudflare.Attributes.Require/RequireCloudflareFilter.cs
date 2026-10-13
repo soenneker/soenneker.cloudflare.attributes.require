@@ -24,7 +24,7 @@ public sealed class RequireCloudflareFilter : IRequireCloudflareAttribute
         _logger = logger;
         _validator = validator;
 
-        var environment = config.GetValueStrict<string>("Environment");
+        var environment = config.GetStringStrict("Environment");
 
         if (environment == DeployEnvironment.Local || environment == DeployEnvironment.Test)
             _exclude = true;
